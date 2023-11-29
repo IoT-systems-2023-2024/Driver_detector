@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART '2921_00057'
+CLASS = IO
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Amphenol", "2921-00057" (!) = "", "292100057", "Other", "", "", "SMA Connector Jack, Female Socket 50Ohm Board Edge, End Launch; Panel Mount, Right Angle Solder", "https://www.svmicrowave.com/Attachment/DownloadFile?downloadId=11255", "6.477 mm"
+END_PART
+
+END.

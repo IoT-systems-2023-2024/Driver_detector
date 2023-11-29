@@ -1,0 +1,9 @@
+Manufacturer=LITTELFUSE
+PartNumber=LS0504EDD12
+PartCategory=Integrated Circuit
+PackageCategory=Small Outline No-lead
+PinCount=4
+Version=2.1
+Released=2023-02-16 03:13:04
+Downloaded=2023-11-05 17:03:22
+3D=Y

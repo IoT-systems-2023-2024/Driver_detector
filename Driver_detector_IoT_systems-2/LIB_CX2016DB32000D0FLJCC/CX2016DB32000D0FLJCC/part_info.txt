@@ -1,0 +1,9 @@
+Manufacturer=AVX
+PartNumber=CX2016DB32000D0FLJCC
+PartCategory=Crystal or Oscillator
+PackageCategory=Other
+PinCount=4
+Version=2.3
+Released=2021-01-22 11:20:23
+Downloaded=2023-11-11 10:56:56
+3D=Y

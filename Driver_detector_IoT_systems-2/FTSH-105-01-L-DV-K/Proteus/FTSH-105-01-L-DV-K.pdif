@@ -1,0 +1,144 @@
+;Proteus Design Interchange Format
+(PDIF
+ (vendor "SamacSys Limited")
+ (version 1 0)
+ (library
+  (part "FTSH-105-01-L-DV-K"
+   (description "Samtec, FTSH, 10 Way, 2 Row, Straight Pin Header")
+   (family "CON")
+   (package "FTSH10501LDVK")
+   (attribute "Datasheet Link" "https://www.arrow.com/en/products/ftsh-105-01-l-dv-k/samtec")
+   (attribute "Geometry.Height" "6.1mm")
+   (attribute "Mouser Part Number" "200-FTSH10501LDVK")
+   (attribute "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Samtec/FTSH-105-01-L-DV-K?qs=%252B5JSS813miOqo3Vy%252BvhCFg%3D%3D")
+   (attribute "Manufacturer_Name" "SAMTEC")
+   (attribute "Manufacturer_Part_Number" "FTSH-105-01-L-DV-K")
+   (gate
+    (symbol "FTSH-105-01-L-DV-K")
+    (pin "1" 1 PS)
+    (pin "2" 2 PS)
+    (pin "3" 3 PS)
+    (pin "4" 4 PS)
+    (pin "5" 5 PS)
+    (pin "6" 6 PS)
+    (pin "7" 7 PS)
+    (pin "8" 8 PS)
+    (pin "9" 9 PS)
+    (pin "10" 10 PS)
+   )
+  )
+  (symbol "FTSH-105-01-L-DV-K"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 200 100) (pt 700 100) (pt 700 -500) (pt 200 -500) (pt 200 100) (closed))
+   )
+   (terminal
+    (body (symbol "PIN") (pt 0 0) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 900 0) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -100) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 900 -100) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -200) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 900 -200) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -300) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 900 -300) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -400) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 900 -400) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+  )
+  (symbol "PIN"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 200 0))))
+  (symbol "PINSHORT"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 100 0))))
+  (package "FTSH10501LDVK"
+   (units MM)
+   (layer TASM
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed true)
+      (pt -3.175 0.32)
+      (pt 3.175 0.32)
+      (pt 3.175 3.75)
+      (pt -3.175 3.75)
+      (pt -3.175 0.32))))
+   (layer OCCA
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -4.175 6.465)
+      (pt 4.175 6.465)
+      (pt 4.175 -3.25)
+      (pt -4.175 -3.25)
+      (pt -4.175 6.465))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt -2.6 -2.2)
+      (arc (pt -2.600 -2.200) (pt -2.600 -2.250) (pt -2.500 -2.150) (start 180.0) (sweep 180.0))
+      (pt -2.5 -2.2)
+      (arc (pt -2.500 -2.200) (pt -2.600 -2.250) (pt -2.500 -2.150) (start 180.0) (sweep .0))
+      (pt -2.6 -2.2)
+      (arc (pt -2.600 -2.200) (pt -2.600 -2.250) (pt -2.500 -2.150) (start 180.0) (sweep 180.0))
+      (pt -2.5 -2.2))))
+   (leg 1 (pt -2.540 0.000) (padstack 0))
+   (leg 2 (pt -2.540 4.070) (padstack 0))
+   (leg 3 (pt -1.270 0.000) (padstack 0))
+   (leg 4 (pt -1.270 4.070) (padstack 0))
+   (leg 5 (pt 0.000 0.000) (padstack 0))
+   (leg 6 (pt 0.000 4.070) (padstack 0))
+   (leg 7 (pt 1.270 0.000) (padstack 0))
+   (leg 8 (pt 1.270 4.070) (padstack 0))
+   (leg 9 (pt 2.540 0.000) (padstack 0))
+   (leg 10 (pt 2.540 4.070) (padstack 0))
+   (padstack 0
+    (plated false)
+    (pad (layer TCOP) (rectf 0.740 2.790 0 0 90.000))
+   )
+   (model "FTSH-105-01-L-DV-K.stp"
+    (euler 90 0 90)
+    (offset 0 2 1.6699999570846558)
+   )
+  )
+ )
+)

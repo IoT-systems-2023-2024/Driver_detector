@@ -1,0 +1,25 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model LS0504EDD12
+#/17437844/1190528/2.50/4/2/Integrated Circuit
+DEF LS0504EDD12 IC 0 30 Y Y 1 F N
+F0 "IC" 850 300 50 H V L CNN
+F1 "LS0504EDD12" 850 200 50 H V L CNN
+F2 "SON50P160X120X60-4N" 850 100 50 H I L CNN
+F3 "https://www.littelfuse.com/media?resourcetype=datasheets&itemid=95b47243-e071-4a2a-9264-64dbef6c0a3f&filename=littelfuse-protection-ic-ls0504edd12-datasheet" 850 0 50 H I L CNN
+F4 "5.5V 4A Low-Ron Power Distribution Load Switch" 850 -100 50 H I L CNN "Description"
+F5 "0.6" 850 -200 50 H I L CNN "Height"
+F6 "576-LS0504EDD12" 850 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/Littelfuse/LS0504EDD12?qs=Y0Uzf4wQF3k6zICD8%2FzPxw%3D%3D" 850 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "LITTELFUSE" 850 -500 50 H I L CNN "Manufacturer_Name"
+F9 "LS0504EDD12" 850 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X GND 1 0 0 200 R 50 50 0 0 P
+X EN 2 0 -100 200 R 50 50 0 0 P
+X OUT 4 1000 0 200 L 50 50 0 0 P
+X IN 3 1000 -100 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 800 100 800 -200 200 -200 200 100 N
+ENDDRAW
+ENDDEF
+#
+#End Library

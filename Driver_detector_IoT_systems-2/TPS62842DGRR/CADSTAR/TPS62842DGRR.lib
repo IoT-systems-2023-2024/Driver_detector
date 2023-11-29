@@ -1,0 +1,16 @@
+.TPS62842DGRR :1 ;Switching Voltage Regulators 60-nA IQ, 1.8-V to 6.5-VIN, high-efficiency 750-mA step-down converter 8-HVSSOP -40 to 125
+SOP65P490X110-9N
+*STM IC
+*NGS
+*PLB 1="VOS" 2="SW" 3="MODE" 4="VSET" 5="EN" 6="VIN" 7="NC" 8="GND_1" 9="GND_2"
+*MXP 9
+*DFN TPS62842DGRR
+~!Mouser Part Number (595-TPS62842DGRR)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TPS62842DGRR?qs=xZ%2FP%252Ba9zWqbpi7pDQDs52A%3D%3D)
+~!Manufacturer_Name (Texas Instruments)
+~!Manufacturer_Part_Number (TPS62842DGRR)
+~!Link Datasheet (https://www.ti.com/lit/ds/symlink/tps62840.pdf)
+~!Height (1.1mm)
+~!3D_Model (TPS62842DGRR)
+TPS62842DGRR
+1.1!U 2.1!U 3.1!U 4.1!U 9.1!U 8.1!U 7.1!U 6.1!U 5.1!U 

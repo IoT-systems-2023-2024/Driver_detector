@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'LS0504EDD12'
+CLASS = IC
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "LITTELFUSE", "LS0504EDD12" (!) = "", "SON50P160X120X60-4N", "Small Outline No-lead", "576-LS0504EDD12", "https://www.mouser.co.uk/ProductDetail/Littelfuse/LS0504EDD12?qs=Y0Uzf4wQF3k6zICD8%2FzPxw%3D%3D", "5.5V 4A Low-Ron Power Distribution Load Switch", "https://www.littelfuse.com/media?resourcetype=datasheets&itemid=95b47243-e071-4a2a-9264-64dbef6c0a3f&filename=littelfuse-protection-ic-ls0504edd12-datasheet", "0.6 mm"
+END_PART
+
+END.

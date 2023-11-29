@@ -1,0 +1,16 @@
+.2921-00057 :1 ;SMA Connector Jack, Female Socket 50Ohm Board Edge, End Launch; Panel Mount, Right Angle Solder
+"292100057"
+*STM J
+*NGS
+*PLB 1="1" 2="2" 3="3" 4="4"
+*MXP 4
+*DFN 2921-00057
+~!Mouser Part Number (-)
+~!Mouser Price/Stock (-)
+~!Manufacturer_Name (Amphenol)
+~!Manufacturer_Part_Number (2921-00057)
+~!Link Datasheet (https://www.svmicrowave.com/Attachment/DownloadFile?downloadId=11255)
+~!Height (6.477mm)
+~!3D_Model (2921-00057)
+"2921-00057"
+1.1!U 2.1!U 3.1!U 4.1!U 

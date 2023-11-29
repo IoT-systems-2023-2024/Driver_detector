@@ -1,0 +1,263 @@
+;Proteus Design Interchange Format
+(PDIF
+ (vendor "SamacSys Limited")
+ (version 1 0)
+ (library
+  (part "2921-00057"
+   (description "SMA Connector Jack, Female Socket 50Ohm Board Edge, End Launch; Panel Mount, Right Angle Solder")
+   (family "CON")
+   (package "292100057")
+   (attribute "Datasheet Link" "https://www.svmicrowave.com/Attachment/DownloadFile?downloadId=11255")
+   (attribute "Geometry.Height" "6.477mm")
+   (attribute "Mouser Part Number" "")
+   (attribute "Mouser Price/Stock" "")
+   (attribute "Manufacturer_Name" "Amphenol")
+   (attribute "Manufacturer_Part_Number" "2921-00057")
+   (gate
+    (symbol "2921-00057")
+    (pin "1" 1 PS)
+    (pin "2" 2 PS)
+    (pin "3" 3 PS)
+    (pin "4" 4 PS)
+   )
+  )
+  (symbol "2921-00057"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 200 100) (pt 600 100) (pt 600 -200) (pt 200 -200) (pt 200 100) (closed))
+   )
+   (terminal
+    (body (symbol "PIN") (pt 0 -100) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 800 -100) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 0) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 800 0) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+  )
+  (symbol "PIN"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 200 0))))
+  (symbol "PINSHORT"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 100 0))))
+  (package "292100057"
+   (units MM)
+   (layer TASM
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -2.895 4.395)
+      (pt 3.21 4.395)
+      (pt 3.21 -1.955)
+      (pt -2.895 -1.955)
+      (pt -2.895 4.395))))
+   (layer OCCA
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -20.22 8.82)
+      (pt 4.21 8.82)
+      (pt 4.21 -6.38)
+      (pt -20.22 -6.38)
+      (pt -20.22 8.82))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed true)
+      (pt 3.21 4.395)
+      (pt -2.895 4.395)
+      (pt -2.895 -1.955)
+      (pt 3.21 -1.955)
+      (pt 3.21 4.395))))
+   (layer TASM
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed false)
+      (pt -2.895 3.82)
+      (pt -3.895 3.82)
+      (pt -3.895 -1.38)
+      (pt -2.895 -1.38))))
+   (layer TASM
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed false)
+      (pt -3.895 3.82)
+      (pt -4.895 4.52)
+      (pt -9.895 4.52)
+      (pt -9.895 6.22)
+      (pt -9.895 7.82)
+      (pt -10.395 7.82)
+      (pt -10.395 -5.38)
+      (pt -9.895 -5.38)
+      (pt -9.895 -2.08)
+      (pt -4.895 -2.08)
+      (pt -3.895 -1.38))))
+   (layer TASM
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed false)
+      (pt -9.895 4.52)
+      (pt -9.895 -2.08))))
+   (layer TASM
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed false)
+      (pt -10.395 6.22)
+      (pt -11.895 6.22)
+      (pt -11.895 -3.78)
+      (pt -10.395 -3.78))))
+   (layer TASM
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed false)
+      (pt -11.895 4.52)
+      (pt -17.895 4.52)
+      (pt -18.395 3.82)
+      (pt -18.395 -1.38)
+      (pt -17.895 -2.08)
+      (pt -11.895 -2.08))))
+   (layer TASM
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed false)
+      (pt -18.395 3.82)
+      (pt -19.22 3.82)
+      (pt -19.22 -1.38)
+      (pt -19.22 -1.38)
+      (pt -18.395 -1.38))))
+   (layer TASM
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed false)
+      (pt -17.895 4.52)
+      (pt -17.895 -2.08))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt -2.895 3.82)
+      (pt -3.895 3.82)
+      (pt -3.895 -1.38)
+      (pt -2.895 -1.38))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt -3.895 3.82)
+      (pt -4.895 4.52)
+      (pt -9.895 4.52)
+      (pt -9.895 7.82)
+      (pt -10.395 7.82)
+      (pt -10.395 -5.38)
+      (pt -9.895 -5.38)
+      (pt -9.895 4.395)
+      (pt -9.895 4.395)
+      (pt -9.895 4.52))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt -9.895 -2.08)
+      (pt -4.895 -2.08)
+      (pt -3.895 -1.38))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt -10.395 6.22)
+      (pt -11.895 6.22)
+      (pt -11.895 -3.78)
+      (pt -10.395 -3.78))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt -11.895 4.52)
+      (pt -17.895 4.52)
+      (pt -17.895 -2.08)
+      (pt -11.895 -2.08))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt -17.895 4.395)
+      (pt -18.395 3.82)
+      (pt -18.395 -1.38)
+      (pt -17.895 -2.08))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt -18.395 3.82)
+      (pt -19.22 3.82)
+      (pt -19.22 -1.38)
+      (pt -18.395 -1.38))))
+   (layer TSLK
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt 0 -2.4)
+      (arc (pt 0.000 -2.400) (pt -0.050 -2.500) (pt 0.050 -2.400) (start 180.0) (sweep 90.0))
+      (pt 0 -2.5)
+      (arc (pt 0.000 -2.500) (pt -0.050 -2.500) (pt 0.050 -2.400) (start 180.0) (sweep -90.0))
+      (pt 0 -2.4))))
+   (leg 1 (pt 0.000 0.000) (padstack 1))
+   (leg 2 (pt 2.210 0.000) (padstack 0))
+   (leg 3 (pt 0.000 2.440) (padstack 0))
+   (leg 4 (pt 2.210 2.440) (padstack 0))
+   (padstack 0
+    (hole 1.01)
+    (plated true)
+    (pad (layer TCOP) (round 1.515))
+    (pad (layer INNER) (round 1.515))
+    (pad (layer BCOP) (round 1.515))
+   )
+   (padstack 1
+    (hole 1.01)
+    (plated true)
+    (pad (layer TCOP) (square 1.515))
+    (pad (layer INNER) (round 1.515))
+    (pad (layer BCOP) (square 1.515))
+   )
+   (model "2921-00057.stp"
+    (euler 90 0 0)
+    (offset -11.460000038146973 1.2200000286102295 3.0799999237060547)
+   )
+  )
+ )
+)

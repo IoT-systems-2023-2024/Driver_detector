@@ -1,0 +1,10 @@
+(unit MM)
+
+(package "CX2016DB32000D0FLJCC"
+    (type UNDEF)
+    (uver 2)
+    (mountForm default
+        (footprintRef "CX2016DB32000D0FLJCC")
+        (spec "default")
+    )
+)

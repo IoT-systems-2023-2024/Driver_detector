@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "TPS62842DGRR"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2020-10-25-11:01:02)
+    (mountForm default
+        (footprintRef "SOP65P490X110-9N")
+        (spec "System")
+    )
+)

@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "CX2016DB32000D0FLJCC"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2021-01-22-11:20:23)
+    (mountForm default
+        (footprintRef "CX2016DB32000D0FLJCC")
+        (spec "System")
+    )
+)

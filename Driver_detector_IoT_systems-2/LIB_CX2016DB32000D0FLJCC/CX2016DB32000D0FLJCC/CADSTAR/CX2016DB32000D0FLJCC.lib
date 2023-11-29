@@ -1,0 +1,18 @@
+.CX2016DB32000D0FLJCC :1 ;AVX - CX2016DB32000D0FLJCC - CRYSTAL, 32MHZ, 8PF, 2 X 1.6MM
+CX2016DB32000D0FLJCC
+*STM Y
+*NGS
+*PLB 1="HOT_1" 2="GND_1" 3="HOT_2" 4="GND_2"
+*MXP 4
+*DFN CX2016DB32000D0FLJCC
+~!Manufacturer_Name (AVX)
+~!Manufacturer_Part_Number (CX2016DB32000D0FLJCC)
+~!Mouser Part Number (581-CX2016DB32DFLJCC)
+~!Link Mouser Price/Stock (https://www.mouser.com/Search/Refine.aspx?Keyword=581-CX2016DB32DFLJCC)
+~!Arrow Part Number (CX2016DB32000D0FLJCC)
+~!Link Arrow Price/Stock (https://www.arrow.com/en/products/cx2016db32000d0fljcc/avx)
+~!Link Datasheet (https://componentsearchengine.com/Datasheets/1/CX2016DB32000D0FLJCC.pdf)
+~!Height (0.45mm)
+~!3D_Model (CX2016DB32000D0FLJCC)
+CX2016DB32000D0FLJCC
+1.1!U 2.1!U 3.1!U 4.1!U 

@@ -1,0 +1,16 @@
+.LS0504EDD12 :1 ;5.5V 4A Low-Ron Power Distribution Load Switch
+SON50P160X120X60-4N
+*STM IC
+*NGS
+*PLB 1="GND" 2="EN" 3="IN" 4="OUT"
+*MXP 4
+*DFN LS0504EDD12
+~!Mouser Part Number (576-LS0504EDD12)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Littelfuse/LS0504EDD12?qs=Y0Uzf4wQF3k6zICD8%2FzPxw%3D%3D)
+~!Manufacturer_Name (LITTELFUSE)
+~!Manufacturer_Part_Number (LS0504EDD12)
+~!Link Datasheet (https://www.littelfuse.com/media?resourcetype=datasheets&itemid=95b47243-e071-4a2a-9264-64dbef6c0a3f&filename=littelfuse-protection-ic-ls0504edd12-datasheet)
+~!Height (0.6mm)
+~!3D_Model (LS0504EDD12)
+LS0504EDD12
+1.1!U 2.1!U 4.1!U 3.1!U 

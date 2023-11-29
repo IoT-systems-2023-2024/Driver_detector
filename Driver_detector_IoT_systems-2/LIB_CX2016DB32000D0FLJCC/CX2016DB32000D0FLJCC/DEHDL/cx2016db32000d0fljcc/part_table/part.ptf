@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'CX2016DB32000D0FLJCC'
+CLASS = DISCRETE
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "ARROW_PART_NUMBER", "ARROW_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "AVX", "CX2016DB32000D0FLJCC" (!) = "", "CX2016DB32000D0FLJCC", "Other", "581-CX2016DB32DFLJCC", "https://www.mouser.com/Search/Refine.aspx?Keyword=581-CX2016DB32DFLJCC", "CX2016DB32000D0FLJCC", "https://www.arrow.com/en/products/cx2016db32000d0fljcc/avx", "AVX - CX2016DB32000D0FLJCC - CRYSTAL, 32MHZ, 8PF, 2 X 1.6MM", "https://componentsearchengine.com/Datasheets/1/CX2016DB32000D0FLJCC.pdf", "0.45 mm"
+END_PART
+
+END.

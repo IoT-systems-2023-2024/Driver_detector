@@ -1,0 +1,16 @@
+.FTSH-105-01-L-DV-K :1 ;Samtec, FTSH, 10 Way, 2 Row, Straight Pin Header
+FTSH10501LDVK
+*STM J
+*NGS
+*PLB 1="1" 2="2" 3="3" 4="4" 5="5" 6="6" 7="7" 8="8" 9="9" 10="10"
+*MXP 10
+*DFN FTSH-105-01-L-DV-K
+~!Mouser Part Number (200-FTSH10501LDVK)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Samtec/FTSH-105-01-L-DV-K?qs=%252B5JSS813miOqo3Vy%252BvhCFg%3D%3D)
+~!Manufacturer_Name (SAMTEC)
+~!Manufacturer_Part_Number (FTSH-105-01-L-DV-K)
+~!Link Datasheet (https://www.arrow.com/en/products/ftsh-105-01-l-dv-k/samtec)
+~!Height (6.1mm)
+~!3D_Model (FTSH-105-01-L-DV-K)
+FTSH-105-01-L-DV-K
+1.1!U 2.1!U 3.1!U 4.1!U 5.1!U 6.1!U 7.1!U 8.1!U 9.1!U 10.1!U 

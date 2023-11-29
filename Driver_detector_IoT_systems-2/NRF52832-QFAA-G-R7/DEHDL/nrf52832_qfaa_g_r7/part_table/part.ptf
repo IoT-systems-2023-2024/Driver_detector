@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'NRF52832_QFAA_G_R7'
+CLASS = IC
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Nordic Semiconductor", "NRF52832-QFAA-G-R7" (!) = "", "QFN40P600X600X95-49N", "Quad Flat No-Lead", "949-NRF52832QFAAG-R7", "https://www.mouser.co.uk/ProductDetail/Nordic-Semiconductor/NRF52832-QFAA-G-R7?qs=iLbezkQI%252BsiMpMdgrsoFbQ%3D%3D", "RF System on a Chip - SoC Versatile Bluetooth 5.3 SoC supporting Bluetooth Low Energy, Bluetooth mesh and NFC", "https://infocenter.nordicsemi.com/pdf/nRF52832_PS_v1.8.pdf", "0.95 mm"
+END_PART
+
+END.

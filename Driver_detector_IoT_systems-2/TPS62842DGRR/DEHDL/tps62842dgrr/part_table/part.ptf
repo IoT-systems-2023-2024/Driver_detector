@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'TPS62842DGRR'
+CLASS = IC
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Texas Instruments", "TPS62842DGRR" (!) = "", "SOP65P490X110-9N", "Small Outline Packages", "595-TPS62842DGRR", "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TPS62842DGRR?qs=xZ%2FP%252Ba9zWqbpi7pDQDs52A%3D%3D", "Switching Voltage Regulators 60-nA IQ, 1.8-V to 6.5-VIN, high-efficiency 750-mA step-down converter 8-HVSSOP -40 to 125", "https://www.ti.com/lit/ds/symlink/tps62840.pdf", "1.1 mm"
+END_PART
+
+END.
