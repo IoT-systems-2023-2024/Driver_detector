@@ -1,5 +1,24 @@
 {
     "nrf-connect.applications": [
         "${workspaceFolder}"
-    ]
+    ],
+    "files.associations": {
+        "kernel.h": "c",
+        "log.h": "c",
+        "soniclib.h": "c",
+        "*.a": "c",
+        "stdio.h": "c",
+        "chirp_board_config.h": "c",
+        "app_config.h": "c",
+        "chirp_smartsonic.h": "c",
+        "chirp_bsp.h": "c",
+        "ultrasound_display_config_info.h": "c",
+        "delay.h": "c",
+        "nrf_delay.h": "c",
+        "nrf_twi.h": "c",
+        "nrf_drv_common.h": "c",
+        "sdk_errors.h": "c",
+        "nrf_error.h": "c",
+        "nrf_drv_twi.h": "c"
+    }
 }

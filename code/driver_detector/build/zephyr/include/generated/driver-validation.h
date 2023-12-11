@@ -8,6 +8,8 @@
 
 #define Z_SYSCALL_DRIVER_GPIO(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, gpio, GPIO)
 
+#define Z_SYSCALL_DRIVER_I2C(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, i2c, I2C)
+
 #define Z_SYSCALL_DRIVER_UART(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, uart, UART)
 
 #define Z_SYSCALL_DRIVER_CRYPTO(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, crypto, CRYPTO)
@@ -49,8 +51,6 @@
 #define Z_SYSCALL_DRIVER_FUEL_GAUGE(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, fuel_gauge, FUEL_GAUGE)
 
 #define Z_SYSCALL_DRIVER_HWSPINLOCK(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, hwspinlock, HWSPINLOCK)
-
-#define Z_SYSCALL_DRIVER_I2C(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, i2c, I2C)
 
 #define Z_SYSCALL_DRIVER_I2S(ptr, op) Z_SYSCALL_DRIVER_GEN(ptr, op, i2s, I2S)
 

@@ -1,7 +1,7 @@
-C:\Users\sienp\Documents\school\IIW4\IoT_systems\code\driver_detector\build\Kconfig\Kconfig.dts
-C:\Users\sienp\Documents\school\IIW4\IoT_systems\code\driver_detector\build\Kconfig\Kconfig.modules
-C:\Users\sienp\Documents\school\IIW4\IoT_systems\code\driver_detector\build\Kconfig\Kconfig.shield
-C:\Users\sienp\Documents\school\IIW4\IoT_systems\code\driver_detector\build\Kconfig\Kconfig.shield.defconfig
+C:\Users\sienp\Documents\school\IIW4\IoT_systems\git\Driver_detector\code\driver_detector\build\Kconfig\Kconfig.dts
+C:\Users\sienp\Documents\school\IIW4\IoT_systems\git\Driver_detector\code\driver_detector\build\Kconfig\Kconfig.modules
+C:\Users\sienp\Documents\school\IIW4\IoT_systems\git\Driver_detector\code\driver_detector\build\Kconfig\Kconfig.shield
+C:\Users\sienp\Documents\school\IIW4\IoT_systems\git\Driver_detector\code\driver_detector\build\Kconfig\Kconfig.shield.defconfig
 C:\ncs\toolchains\c57af46cb7\opt\zephyr-sdk\cmake\zephyr\Kconfig
 C:\ncs\v2.5.0\modules\debug\TraceRecorder\config\Kconfig
 C:\ncs\v2.5.0\modules\debug\TraceRecorder\kernelports\Zephyr\Kconfig

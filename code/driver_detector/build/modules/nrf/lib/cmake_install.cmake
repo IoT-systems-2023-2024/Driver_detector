@@ -39,26 +39,26 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/sienp/Documents/school/IIW4/IoT_systems/code/driver_detector/build/modules/nrf/lib/bin/cmake_install.cmake")
+  include("C:/Users/sienp/Documents/school/IIW4/IoT_systems/git/Driver_detector/code/driver_detector/build/modules/nrf/lib/bin/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/sienp/Documents/school/IIW4/IoT_systems/code/driver_detector/build/modules/nrf/lib/dk_buttons_and_leds/cmake_install.cmake")
+  include("C:/Users/sienp/Documents/school/IIW4/IoT_systems/git/Driver_detector/code/driver_detector/build/modules/nrf/lib/dk_buttons_and_leds/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/sienp/Documents/school/IIW4/IoT_systems/code/driver_detector/build/modules/nrf/lib/multithreading_lock/cmake_install.cmake")
+  include("C:/Users/sienp/Documents/school/IIW4/IoT_systems/git/Driver_detector/code/driver_detector/build/modules/nrf/lib/multithreading_lock/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/sienp/Documents/school/IIW4/IoT_systems/code/driver_detector/build/modules/nrf/lib/flash_patch/cmake_install.cmake")
+  include("C:/Users/sienp/Documents/school/IIW4/IoT_systems/git/Driver_detector/code/driver_detector/build/modules/nrf/lib/flash_patch/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/sienp/Documents/school/IIW4/IoT_systems/code/driver_detector/build/modules/nrf/lib/fatal_error/cmake_install.cmake")
+  include("C:/Users/sienp/Documents/school/IIW4/IoT_systems/git/Driver_detector/code/driver_detector/build/modules/nrf/lib/fatal_error/cmake_install.cmake")
 endif()
 

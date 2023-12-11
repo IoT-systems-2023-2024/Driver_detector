@@ -1,5 +1,5 @@
 /*
-Copyright © 2016-2019, Chirp Microsystems.  All rights reserved.
+Copyright ï¿½ 2016-2019, Chirp Microsystems.  All rights reserved.
 All rights reserved.
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
@@ -20,9 +20,9 @@ You can contact the authors of this program by email at support@chirpmicro.com
 #ifndef CHIRP_SMARTSONIC_H
 #define CHIRP_SMARTSONIC_H
 
-#include "soniclib.h"
+#include "src\drivers\chirpmicro\inc\soniclib.h"
 #include "chirp_board_config.h"
-#include "app_config.h"
+#include "src\application\smartsonic-hellochirp-example\inc\app_config.h"
 
 /* Standard symbols used in board support package - use values from config header */
 #define CHBSP_MAX_DEVICES 		CHIRP_MAX_NUM_SENSORS

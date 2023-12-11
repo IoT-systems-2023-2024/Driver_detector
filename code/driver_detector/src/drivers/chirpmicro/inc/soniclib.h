@@ -156,7 +156,7 @@ typedef struct ch_group_t ch_group_t;
 #define CH_NO_TARGET		(0xFFFFFFFF)	/*!< Range value returned if no target was detected. */
 #define	CH_MIN_RANGE_VAL	(0x0001)		/*!< Minimum range value returned for very short distances */
 
-#define CH_I2C_ADDR_PROG	(0x720) 			/*!< I2C address of sensor programming interface.  --> HIER AANPASSEN */
+#define CH_I2C_ADDR_PROG	(0x45) 			/*!< I2C address of sensor programming interface. (programming address van ch101 chip zelf) */
 #define CH_SIG_BYTE_0		(0x0a)			/*!< Signature byte in sensor (1 of 2). */
 #define CH_SIG_BYTE_1		(0x02)			/*!< Signature byte in sensor (2 of 2). */
 

@@ -57,7 +57,8 @@
  */
 
 	/* CH101 GPR - general purpose rangefinding, standard range */
-#define	 CHIRP_SENSOR_FW_INIT_FUNC	ch101_gpr_init
+#define	 CHIRP_SENSOR_FW_INIT_FUNC	ch101_gpr_open_init
+
 
 	/* CH101 GPR NARROW - general purpose rangefinding, narrow FoV */
 // #define	 CHIRP_SENSOR_FW_INIT_FUNC	ch101_gpr_narrow_init

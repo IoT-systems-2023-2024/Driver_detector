@@ -27,7 +27,7 @@
 
 #include <stdint.h>
 
-#include "soniclib.h"
+#include "src\drivers\chirpmicro\inc\soniclib.h"
 
 /*
  * Display the configuration values for a sensor

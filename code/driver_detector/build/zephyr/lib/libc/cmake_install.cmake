@@ -39,11 +39,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/sienp/Documents/school/IIW4/IoT_systems/code/driver_detector/build/zephyr/lib/libc/picolibc/cmake_install.cmake")
+  include("C:/Users/sienp/Documents/school/IIW4/IoT_systems/git/Driver_detector/code/driver_detector/build/zephyr/lib/libc/picolibc/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/sienp/Documents/school/IIW4/IoT_systems/code/driver_detector/build/zephyr/lib/libc/common/cmake_install.cmake")
+  include("C:/Users/sienp/Documents/school/IIW4/IoT_systems/git/Driver_detector/code/driver_detector/build/zephyr/lib/libc/common/cmake_install.cmake")
 endif()
 
