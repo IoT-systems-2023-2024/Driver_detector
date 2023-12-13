@@ -19,6 +19,10 @@
         "nrf_drv_common.h": "c",
         "sdk_errors.h": "c",
         "nrf_error.h": "c",
-        "nrf_drv_twi.h": "c"
+        "nrf_drv_twi.h": "c",
+        "nrf_gpio.h": "c"
+    },
+    "nrf-connect.debugging.bindings": {
+        "${workspaceFolder}/build": "Launch build"
     }
 }

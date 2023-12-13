@@ -144,7 +144,8 @@ __ASM (
 #endif
        " BNE loop\n\t");
 }
-#elif defined   (  __GNUgC__  )
+__GNUC__ = 1
+#elif defined   (  __GNUC__  )
 static void __INLINE nrf_delay_us(uint32_t volatile number_of_us) __attribute__((always_inline));
 static void __INLINE nrf_delay_us(uint32_t volatile number_of_us)
 {

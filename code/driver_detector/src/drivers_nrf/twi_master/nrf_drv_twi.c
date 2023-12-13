@@ -11,10 +11,10 @@
  */
 
 #include "nrf_drv_twi.h"
-#include "nrf_assert.h"
-#include "app_util_platform.h"
-#include "nrf_delay.h"
-#include "nrf_gpio.h"
+#include "src\libraries\util\nrf_assert.h"
+#include "src\libraries\util\app_util_platform.h"
+// #include "nrf_delay.h"
+#include "src\nrfx\hal\nrf_gpio.h"
 
 /**@brief Determine how long driver will be wait for event (in blocking mode). */
 #define BUSY_LOOP_TIMEOUT   0xFFF
@@ -67,8 +67,8 @@ typedef struct
     uint8_t        * p_data;                /**< Pointer to data buffer. */
     uint16_t         length;                /**< Length of data buffer. */
     uint16_t         count;                 /**< Count of already transferred bytes. */
-    nrf_twi_tasks_t  task;                  /**< Next task. */
-    nrf_twi_events_t end_event;             /**< Event for which the state machine waits. */
+    nrf_twi_task_t  task;                  /**< Next task. */
+    nrf_twi_event_t end_event;             /**< Event for which the state machine waits. */
     nrf_twi_int_mask_t end_int;             /**< Interrupt for which the state machine waits. */
 } transfer_t;
 
@@ -260,20 +260,20 @@ static void state_machine(volatile nrf_drv_twi_t const * const p_instance, sm_ev
  *
  * @param[in] p_instance      TWI.
  */
-static void txrx_shorts_set_task_start(volatile nrf_drv_twi_t const * const p_instance)
+static void txrx_short_set_task_start(volatile nrf_drv_twi_t const * const p_instance)
 {
     uint32_t short_mask;
     volatile transfer_t * p_transfer = &(m_cb[p_instance->instance_id].transfer);
 
-    nrf_twi_shorts_clear(p_instance->p_reg,
-                         NRF_TWI_SHORTS_BB_SUSPEND_MASK | NRF_TWI_SHORTS_BB_STOP_MASK);
+    nrf_twi_short_clear(p_instance->p_reg,
+                         NRF_TWI_SHORT_BB_SUSPEND_MASK | NRF_TWI_SHORT_BB_STOP_MASK);
 
     // if the last one and no pending transfer prepare to wait for stopped event
     if (((p_transfer->count + 1) == p_transfer->length) && p_transfer->xfer_pending == false)
     {
-        short_mask = NRF_TWI_SHORTS_BB_STOP_MASK;
+        short_mask = NRF_TWI_SHORT_BB_STOP_MASK;
 
-        p_transfer->end_event = NRF_TWI_EVENTS_STOPPED;
+        p_transfer->end_event = NRF_TWI_EVENT_STOPPED;
         nrf_twi_event_clear(p_instance->p_reg, p_transfer->end_event);
 
         if (m_handlers[p_instance->instance_id])
@@ -287,12 +287,12 @@ static void txrx_shorts_set_task_start(volatile nrf_drv_twi_t const * const p_in
     }
     else
     {
-        short_mask = NRF_TWI_SHORTS_BB_SUSPEND_MASK;
+        short_mask = NRF_TWI_SHORT_BB_SUSPEND_MASK;
     }
 
-    nrf_twi_shorts_set(p_instance->p_reg, short_mask);
-    nrf_twi_tasks_t prev_task = p_transfer->task;
-    p_transfer->task = NRF_TWI_TASKS_RESUME;
+    nrf_twi_short_set(p_instance->p_reg, short_mask);
+    nrf_twi_task_t prev_task = p_transfer->task;
+    p_transfer->task = NRF_TWI_TASK_RESUME;
     nrf_twi_task_set(p_instance->p_reg, prev_task);
 }
 
@@ -302,9 +302,9 @@ static void address_req(volatile nrf_drv_twi_t const * const p_instance)
     volatile transfer_t * p_transfer = &(m_cb[p_instance->instance_id].transfer);
     nrf_twi_address_set(p_instance->p_reg, p_transfer->address);
 
-    nrf_twi_task_set(p_instance->p_reg, NRF_TWI_TASKS_RESUME);
-    p_transfer->task = NRF_TWI_TASKS_STARTTX;
-    p_transfer->end_event = NRF_TWI_EVENTS_TXDSENT;
+    nrf_twi_task_set(p_instance->p_reg, NRF_TWI_TASK_RESUME);
+    p_transfer->task = NRF_TWI_TASK_STARTTX;
+    p_transfer->end_event = NRF_TWI_EVENT_TXDSENT;
     nrf_twi_event_clear(p_instance->p_reg, p_transfer->end_event);
 
     if (m_handlers[p_instance->instance_id])
@@ -323,9 +323,9 @@ static void rx_address_req(volatile nrf_drv_twi_t const * const p_instance)
     volatile transfer_t * p_transfer = &(m_cb[p_instance->instance_id].transfer);
 
     nrf_twi_address_set(p_instance->p_reg, p_transfer->address);
-    nrf_twi_task_set(p_instance->p_reg, NRF_TWI_TASKS_RESUME);
-    p_transfer->task = NRF_TWI_TASKS_STARTRX;
-    p_transfer->end_event = NRF_TWI_EVENTS_RXDREADY;
+    nrf_twi_task_set(p_instance->p_reg, NRF_TWI_TASK_RESUME);
+    p_transfer->task = NRF_TWI_TASK_STARTRX;
+    p_transfer->end_event = NRF_TWI_EVENT_RXDREADY;
     nrf_twi_event_clear(p_instance->p_reg, p_transfer->end_event);
     if (m_handlers[p_instance->instance_id])
     {
@@ -340,7 +340,7 @@ static void rx_address_req(volatile nrf_drv_twi_t const * const p_instance)
 
 static void rx_prepare(volatile nrf_drv_twi_t const * const p_instance)
 {
-    txrx_shorts_set_task_start(p_instance);
+    txrx_short_set_task_start(p_instance);
 }
 
 
@@ -363,7 +363,7 @@ static void tx_prepare(volatile nrf_drv_twi_t const * const p_instance)
     volatile transfer_t * p_transfer = &(m_cb[p_instance->instance_id].transfer);
 
     nrf_twi_txd_set(p_instance->p_reg, p_transfer->p_data[p_transfer->count]);
-    txrx_shorts_set_task_start(p_instance);
+    txrx_short_set_task_start(p_instance);
 }
 
 
@@ -384,7 +384,7 @@ static void on_error(volatile nrf_drv_twi_t const * const p_instance)
 {
     volatile transfer_t * p_transfer = &(m_cb[p_instance->instance_id].transfer);
 
-    p_transfer->end_event            = NRF_TWI_EVENTS_STOPPED;
+    p_transfer->end_event            = NRF_TWI_EVENT_STOPPED;
     nrf_twi_event_clear(p_instance->p_reg, p_transfer->end_event);
 
     if (m_handlers[p_instance->instance_id])
@@ -394,8 +394,8 @@ static void on_error(volatile nrf_drv_twi_t const * const p_instance)
         nrf_twi_int_enable(p_instance->p_reg, p_transfer->end_int);
     }
 
-    nrf_twi_task_set(p_instance->p_reg, NRF_TWI_TASKS_RESUME);
-    nrf_twi_task_set(p_instance->p_reg, NRF_TWI_TASKS_STOP);
+    nrf_twi_task_set(p_instance->p_reg, NRF_TWI_TASK_RESUME);
+    nrf_twi_task_set(p_instance->p_reg, NRF_TWI_TASK_STOP);
 }
 
 static void ack_error(volatile nrf_drv_twi_t const * const p_instance)
@@ -422,7 +422,7 @@ static bool twi_action_wait(nrf_drv_twi_t const * const p_instance)
     do
     {
         done  = nrf_twi_event_check(p_instance->p_reg, p_transfer->end_event);
-        error = nrf_twi_event_check(p_instance->p_reg, NRF_TWI_EVENTS_ERROR);
+        error = nrf_twi_event_check(p_instance->p_reg, NRF_TWI_EVENT_ERROR);
         error |= (++timeout < BUSY_LOOP_TIMEOUT) ? false : true;
     } while (!(error | done));
     return !error;
@@ -439,7 +439,8 @@ static void twi_clear_bus(nrf_drv_twi_t const * const p_instance, nrf_drv_twi_co
     NRF_GPIO->PIN_CNF[p_config->scl] = SCL_PIN_CONF_CLR;
     NRF_GPIO->PIN_CNF[p_config->sda] = SDA_PIN_CONF_CLR;
 
-    nrf_delay_us(4);
+    k_usleep(4);
+    // nrf_delay_us(4);
 
     for(int i = 0; i < 9; i++)
     {
@@ -455,12 +456,15 @@ static void twi_clear_bus(nrf_drv_twi_t const * const p_instance, nrf_drv_twi_co
             }
         }
         nrf_gpio_pin_clear(p_config->scl);
-        nrf_delay_us(4);
+        k_usleep(4);
+        // nrf_delay_us(4);
         nrf_gpio_pin_set(p_config->scl);
-        nrf_delay_us(4);
+        k_usleep(4);
+        // nrf_delay_us(4);
     }
     nrf_gpio_pin_clear(p_config->sda);
-    nrf_delay_us(4);
+    k_usleep(4);
+    // nrf_delay_us(4);
     nrf_gpio_pin_set(p_config->sda);
 }
 
@@ -528,7 +532,7 @@ static ret_code_t twi_transfer(nrf_drv_twi_t const * const p_instance,
         {
             if (twi_action_wait(p_instance) == false)
             {
-                nrf_twi_event_clear(p_instance->p_reg, NRF_TWI_EVENTS_ERROR);
+                nrf_twi_event_clear(p_instance->p_reg, NRF_TWI_EVENT_ERROR);
                 evt = ON_ERROR;
             }
             nrf_twi_event_clear(p_instance->p_reg, p_transfer->end_event);
@@ -597,7 +601,7 @@ void nrf_drv_twi_uninit(nrf_drv_twi_t const * const p_instance)
         nrf_drv_common_irq_disable(p_instance->irq);
     }
     nrf_drv_twi_disable(p_instance);
-    nrf_twi_shorts_clear(p_instance->p_reg, DISABLE_MASK);
+    nrf_twi_short_clear(p_instance->p_reg, DISABLE_MASK);
 
     m_cb[p_instance->instance_id].state = NRF_DRV_STATE_UNINITIALIZED;
 }
@@ -607,10 +611,10 @@ void nrf_drv_twi_enable(nrf_drv_twi_t const * const p_instance)
 {
     ASSERT(m_cb[p_instance->instance_id].state == NRF_DRV_STATE_INITIALIZED);
 
-    nrf_twi_event_clear(p_instance->p_reg, NRF_TWI_EVENTS_STOPPED);
-    nrf_twi_event_clear(p_instance->p_reg, NRF_TWI_EVENTS_RXDREADY);
-    nrf_twi_event_clear(p_instance->p_reg, NRF_TWI_EVENTS_TXDSENT);
-    nrf_twi_event_clear(p_instance->p_reg, NRF_TWI_EVENTS_ERROR);
+    nrf_twi_event_clear(p_instance->p_reg, NRF_TWI_EVENT_STOPPED);
+    nrf_twi_event_clear(p_instance->p_reg, NRF_TWI_EVENT_RXDREADY);
+    nrf_twi_event_clear(p_instance->p_reg, NRF_TWI_EVENT_TXDSENT);
+    nrf_twi_event_clear(p_instance->p_reg, NRF_TWI_EVENT_ERROR);
 
     if (m_handlers[p_instance->instance_id])
     {
@@ -627,7 +631,7 @@ void nrf_drv_twi_disable(nrf_drv_twi_t const * const p_instance)
 {
     ASSERT(m_cb[p_instance->instance_id].state != NRF_DRV_STATE_UNINITIALIZED);
 
-    nrf_twi_task_set(p_instance->p_reg, NRF_TWI_TASKS_STOP);
+    nrf_twi_task_set(p_instance->p_reg, NRF_TWI_TASK_STOP);
     nrf_twi_disable(p_instance->p_reg);
     nrf_twi_int_disable(p_instance->p_reg, DISABLE_MASK);
     m_cb[p_instance->instance_id].state = NRF_DRV_STATE_INITIALIZED;
@@ -676,13 +680,13 @@ __STATIC_INLINE void nrf_drv_twi_int_handler(NRF_TWI_Type * p_reg, uint32_t inst
     volatile transfer_t * p_transfer = &(m_cb[instance_id].transfer);
     sm_evt_t sm_event;
 
-    bool error_occured   = nrf_twi_event_check(p_reg, NRF_TWI_EVENTS_ERROR);
+    bool error_occured   = nrf_twi_event_check(p_reg, NRF_TWI_EVENT_ERROR);
     bool end_evt_occured = nrf_twi_event_check(p_reg, p_transfer->end_event);
 
-    nrf_twi_event_clear(p_reg, NRF_TWI_EVENTS_ERROR);
-    nrf_twi_event_clear(p_reg, NRF_TWI_EVENTS_TXDSENT);
-    nrf_twi_event_clear(p_reg, NRF_TWI_EVENTS_RXDREADY);
-    nrf_twi_event_clear(p_reg, NRF_TWI_EVENTS_STOPPED);
+    nrf_twi_event_clear(p_reg, NRF_TWI_EVENT_ERROR);
+    nrf_twi_event_clear(p_reg, NRF_TWI_EVENT_TXDSENT);
+    nrf_twi_event_clear(p_reg, NRF_TWI_EVENT_RXDREADY);
+    nrf_twi_event_clear(p_reg, NRF_TWI_EVENT_STOPPED);
 
     if (error_occured || end_evt_occured)
     {

@@ -22,16 +22,14 @@
 #include <dk_buttons_and_leds.h>
 
 #include <stdio.h>
-#include <src\drivers\chirpmicro\inc\soniclib.h>		// Chirp SonicLib sensor API definitions
-#include "src\board\config\chirp_board_config.h"	// required header with basic device counts etc.
-#include "src\application\smartsonic-hellochirp-example\inc\app_config.h"
-#include "src\application\smartsonic-hellochirp-example\inc\app_version.h"
-#include "src\drivers\chirpmicro\inc\chirp_bsp.h"			// board support package function definitions
-#include "src\board\config\chirp_smartsonic.h"
-#include "src\ultrasound\inc\ultrasound_display_config_info.h"
+// #include <src\drivers\chirpmicro\inc\soniclib.h>		// Chirp SonicLib sensor API definitions
+// #include "src\board\config\chirp_board_config.h"	// required header with basic device counts etc.
+// #include "src\application\smartsonic-hellochirp-example\inc\app_config.h"
+// #include "src\application\smartsonic-hellochirp-example\inc\app_version.h"
+// #include "src\drivers\chirpmicro\inc\chirp_bsp.h"			// board support package function definitions
+// #include "src\board\config\chirp_smartsonic.h"
+// #include "src\ultrasound\inc\ultrasound_display_config_info.h"
 
-#include <stdint.h>
-#include "src\drivers_nrf\delay\nrf_delay.h"
 #include "src\nrfx\hal\nrf_twi.h"
 #include "src\drivers_nrf\twi_master\nrf_drv_twi.h"
 #include "src\libraries\util\app_error.h"
@@ -209,13 +207,16 @@ void main(void)
 
     // Reset Chirp 101 sensor
     nrf_gpio_pin_set(CHIRP_RESET_PIN);
-    nrf_delay_ms(10);
+	k_msleep(10);
+    // nrf_delay_ms(10);
     nrf_gpio_pin_clear(CHIRP_RESET_PIN);
-    nrf_delay_ms(10);
+	k_msleep(10);
+    // nrf_delay_ms(10);
 
     // Initialize Chirp 101 sensor
     chirp_write_byte(0x80, 0x03); // Software reset
-    nrf_delay_ms(10); // Wait for reset to complete
+	k_msleep(10);
+    // nrf_delay_ms(10); // Wait for reset to complete
 
 
 
