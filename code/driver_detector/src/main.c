@@ -33,7 +33,10 @@
 #include "src\nrfx\hal\nrf_twi.h"
 #include "src\drivers_nrf\twi_master\nrf_drv_twi.h"
 #include "src\libraries\util\app_error.h"
+#include <zephyr/drivers/i2c.h>  //alles met deze libraries handmatig doen
 
+
+// met board button 
 
 /* CH101 */
 
